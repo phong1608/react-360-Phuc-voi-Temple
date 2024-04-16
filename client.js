@@ -69,7 +69,7 @@ function init(bundle, parent, options = {}) {
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('gdansk.jpg'));
+  r360.compositor.setBackground(r360.getAssetURL('gdansk4.jpg'));
 }
 
 class surfaceModule extends Module {
@@ -90,31 +90,7 @@ class surfaceModule extends Module {
   }
 
   start() {
-    r360.renderToSurface(
-      r360.createRoot('InfoPanel', { id: 'market',
-                                     text: 'Browse our incredible market.' }),
-      marketPanel,
-    );
-
-    r360.renderToSurface(
-      r360.createRoot('InfoPanel', { id: 'shopping',
-                                     text: 'Shop until you drop!'}),
-      shoppingPanel,
-    );
-
-    r360.renderToSurface(
-      r360.createRoot('InfoPanel', { id: 'museum',
-                                     text: 'The Life of Pablo Picasso: Blue.'}),
-      museumPanel,
-    );
-
-    r360.renderToSurface(
-      r360.createRoot('InfoPanel', { id: 'restaurant',
-                                     text: 'Enjoy a delicious beer at our restaurants.' }),
-      restaurantPanel,
-    );
-
-    r360.detachRoot(introRoot);
+    r360.compositor.setBackground(r360.getAssetURL('view2.jpg'))
   }
 }
 
